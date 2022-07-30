@@ -1,47 +1,75 @@
-/* 드랍다운 시작 */
+/* ===드랍다운 시작=== */
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #7bca7d;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-  }
+    width: 100%; /* 부모(class=exchange-box)의 100퍼센트를 가로 길이로 가지겠다 */
+}
   
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative; /* 상대 위치는 해당 HTML 요소의 정적 위치(static position)에 따라 위치를 재조정하는 방식입니다 */
     display: inline-block;
-  }
+    width: 100%; /* 부모(class=exchange-box)의 100퍼센트를 가로 길이로 가지겠다 */
+}
   
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
+ /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none; /* 마우스 오버 전까지는 보이지 않음 */
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
+    z-index: 1; /* 맨 앞으로 가져오기 */
+    width: 100%; /* 부모(class=exchange-box)의 100퍼센트를 가로 길이로 가지겠다 */
+}
   
-  /* Links inside the dropdown */
-  .dropdown-content a {
+/* Links inside the dropdown */
+.dropdown-content a { /* dropdown-content의 자식 a 태그 */
     color: black;
     padding: 12px 16px;
-    text-decoration: none;
+    text-decoration: none; /* a href 태그는 자동으로 글씨에 밑줄이 생기는데 이 효과를 없엔다.*/
     display: block;
-  }
+}
   
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover { /* dropdown-content의 자식 a태그에 마우스를 가져다 놓았을때 */
+    background-color: #dcd5d5
+}
   
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content { /* dropdown 위로 마우스 오버 상태에서는 드랍다운 콘텐츠를 보이게 한다. */
+    display: block; 
+}
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
     background-color: #3e8e41;
-  }
-  /* 드랍다운 끝 */
+}
+
+.input-area {
+    width: 100%; /* 부모(class=exchange-box)의 100퍼센트를 가로 길이로 가지겠다 */
+}
+
+.input-area input { /* input-area안에 있는 input 태그 */
+    width: 100%; /* 부모(class=exchange-box)의 100퍼센트를 가로 길이로 가지겠다 */
+}
+
+.input-area { /* width: 100%로 부모의 크기에 맞춰도 padding 같은 것들 때문에 부모의 크기를 넘을 수 있는데 그걸 방지함 */
+    box-sizing: border-box;
+}
+
+.input-area input { /* width: 100%로 부모의 크기에 맞춰도 padding 같은 것들 때문에 부모의 크기를 넘을 수 있는데 그걸 방지함 */
+    box-sizing: border-box;
+}
+/* ===드랍다운 끝=== */
+
+/* ===2개의 dropdown 버튼을 감싸는 영역 시작=== */
+.exchange-box {
+    border: 1px solid black;
+    width: 400px;
+}
+/* ===2개의 dropdown 버튼을 감싸는 영역 끝=== */
