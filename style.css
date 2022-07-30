@@ -65,11 +65,28 @@
 .input-area input { /* width: 100%로 부모의 크기에 맞춰도 padding 같은 것들 때문에 부모의 크기를 넘을 수 있는데 그걸 방지함 */
     box-sizing: border-box;
 }
-/* ===드랍다운 끝=== */
 
-/* ===2개의 dropdown 버튼을 감싸는 영역 시작=== */
+.text {
+    background-color: #aed7d4b7;
+}
+
 .exchange-box {
     border: 1px solid black;
     width: 400px;
 }
-/* ===2개의 dropdown 버튼을 감싸는 영역 끝=== */
+
+/* ===드랍다운 끝=== */
+
+.container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 800px;
+}
+
+.background {
+    background-image: url("/images/background_image.jpg");
+    background-repeat: no-repeat; /* background-image를 사용할때 화면 크기에 꽉채우게 배경이미지가 반복되는 것을 막음*/
+    background-position: center center; /* background-image를 가운데로 이동 */
+    height: 820px;
+}
